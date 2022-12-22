@@ -5,13 +5,13 @@ using namespace std;
 class Sneakers{
     public:
     string brand;
-    int size;
+    double size;
     string color;
     double price;
     int quantity;
     string material;
     int number;
-    Sneakers(string brand, int size, string color, double price, int quantity, string material, int number){
+    Sneakers(string brand, double size, string color, double price, int quantity, string material, int number){
         this -> brand = brand;
         this -> size = size;
         this -> color = color;
@@ -23,7 +23,6 @@ class Sneakers{
 };
 class SportShoesStore{
     public:
-    friend Sneakers;
     Sneakers sneakers[5] = {
     Sneakers("Nike", 41, "red", 4070.50, 2500, "leather", 40000),
     Sneakers("Adidas", 43, "black", 3000, 4200, "textile", 90000),
@@ -49,7 +48,7 @@ class SportShoesStore{
 		    }
 	    }
     }
-    int SortNumer(){
+    int SortNumber(){
 	    for(int i = 1; i < 5; i++){
 		    int j = i - 1;
 		    while(j >= 0 && sneakers[j].number < sneakers[j + 1].number){

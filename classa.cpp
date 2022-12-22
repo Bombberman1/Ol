@@ -27,7 +27,7 @@ int main(){
         cout << sneakersO.sneakers[y].number << endl;
     }
     cout << endl;
-    sneakersO.SortNumer();
+    sneakersO.SortNumber();
     for(int y = 0; y < 5; y++){
         cout << sneakersO.sneakers[y].brand << "\t";
         cout << sneakersO.sneakers[y].size << "\t";
